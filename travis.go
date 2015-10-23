@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gopkg.in/yaml.v2"
+	yaml "gopkg.in/yaml.v2"
 )
 
 type TravisYml struct {
@@ -11,7 +11,7 @@ type TravisYml struct {
 }
 
 func NewTravisYml(file string) (t *TravisYml) {
-	if err := yaml.Unmarshal([]byte(data), t); err != nil {
+	if err := yaml.Unmarshal([]byte(dsata), t); err != nil {
 		log.Fatalf("error: %v", err)
 	}
 	fmt.Printf("--- t:\n%v\n\n", t)
